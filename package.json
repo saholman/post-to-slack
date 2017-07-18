@@ -1,0 +1,14 @@
+{
+  "name": "post-to-slack",
+  "version": "0.0.1",
+  "description": "A simple module that lets you post to a Slack Incoming Webhook with a callback",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "keywords": [
+    "slack"
+  ],
+  "author": "Spencer Holman",
+  "license": "Apache-2.0"
+}
