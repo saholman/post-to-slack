@@ -10,5 +10,17 @@
     "slack"
   ],
   "author": "Spencer Holman",
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saholman/post-to-slack.git"
+  },
+  "bugs": {
+    "url": "https://github.com/saholman/post-to-slack/issues"
+  },
+  "homepage": "https://github.com/saholman/post-to-slack#readme",
+  "dependencies": {
+    "format-json": "^1.0.3",
+    "request": "^2.81.0"
+  }
 }

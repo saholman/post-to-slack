@@ -1,10 +1,22 @@
+var request = require('request')
 
-function postToSlack(msg, callback) {
-    let slack_data = {
-        "text": msg
+module.exports = function(obj, url, callback) {
+    if(typeof obj === "string") {
+        let slack_data = {
+            "text": obj
+        }
+        post(slack_data, url, callback)
+    } else if(typeof obj === "object") {
+        let slack_data = obj
+        post(slack_data, url, callback)
+    } else {
+        throw("Parameter " + obj + " is not a string or an object")
     }
+}
+
+function post(slack_data, url, callback) {
     request({
-        url: 'https://hooks.slack.com/services/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',
+        url: url,
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -14,7 +26,7 @@ function postToSlack(msg, callback) {
 		}
     }, function(err, res, body) {
         if(err) {
-            callback("postToSlack err: " + err)
+            callback("post-to-slack err: " + err)
         } else {
             console.log("post to slack successful")
             callback()
