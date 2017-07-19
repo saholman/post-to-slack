@@ -1,5 +1,5 @@
 const slack = require('./index.js')
-const url = '<your slack webhook url>';
+const url = '<your slack webhook>';
 var formatter = require('format-json')
 
 // slack("Testing", url, function(err) {
