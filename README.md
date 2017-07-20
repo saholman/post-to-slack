@@ -15,7 +15,7 @@ slack("Testing", url, function(err) {
      }
 })
 ```
-#### Posting an attachments
+#### Posting attachments
 
 ```
 const slack = require('post-to-slack')
